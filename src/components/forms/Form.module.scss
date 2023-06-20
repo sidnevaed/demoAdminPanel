@@ -1,0 +1,43 @@
+@import "sass/abstracts/mixins";
+
+.form {
+  max-width: 70rem;
+  margin: 5rem auto;
+  padding: 1rem;
+  border: 1px solid var(--color-form-border);
+  border-radius: 5px;
+  background-color: var(--color-form-background);
+
+  @include respond(phone) {
+    max-width: 50rem;
+  }
+
+  & label,
+  & input {
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+
+    @include respond(phone) {
+      width: 55%;
+    }
+  }
+
+  & label {
+    font-weight: bold;
+    padding-top: 3rem;
+  }
+
+  & input {
+    padding: 0.5rem;
+    color: var(--color-form-input);
+
+    @include respond(phone) {
+      font-size: 1rem;
+    }
+  }
+}
+
+.text {
+  text-align: center;
+}

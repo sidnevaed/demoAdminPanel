@@ -1,0 +1,29 @@
+@import "sass/abstracts/mixins";
+
+button {
+  font-family: inherit;
+  font-size: 1.3rem;
+  display: inline-block;
+  cursor: pointer;
+  padding: 0.5rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 4px;
+  background-color: transparent;
+  color: var(--color-button-default);
+  border: 1px solid var(--color-button-default-border);
+
+  @include respond(phone) {
+    padding: 0.2rem 0.5rem;
+  }
+
+  &:hover,
+  &:active {
+    background-color: var(--color-button-hover-background);
+    color: var(--color-white);
+  }
+
+  &:disabled {
+    background-color: var(--color-button-disabled);
+    color: var(--color-black);
+  }
+}
