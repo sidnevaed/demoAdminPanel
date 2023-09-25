@@ -9,6 +9,8 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useAppDispatch } from "./store/hooks";
 import { login, logout } from "./store/authSlice";
 import { UsersPage } from "./pages/UsersPage";
+import { Provider } from "react-redux";
+import { store } from "./store/store";
 
 const router = createBrowserRouter([
   {
@@ -64,7 +66,18 @@ export const App = () => {
 
   return (
     <div>
+      <a>Learn react</a>
       <RouterProvider router={router} />
     </div>
+  );
+};
+
+export const AppWithStore = () => {
+  return (
+    <React.StrictMode>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </React.StrictMode>
   );
 };
