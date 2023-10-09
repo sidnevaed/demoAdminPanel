@@ -66,7 +66,6 @@ export const App = () => {
 
   return (
     <div>
-      <a>Learn react</a>
       <RouterProvider router={router} />
     </div>
   );
