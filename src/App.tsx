@@ -11,33 +11,39 @@ import { login, logout } from "./store/authSlice";
 import { UsersPage } from "./pages/UsersPage";
 import { Provider } from "react-redux";
 import { store } from "./store/store";
+import { ErrorPage } from "./pages/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <HomePage />,
+    errorElement: <ErrorPage />,
   },
 
   {
     path: "signup",
     element: <RegisterPage />,
+    errorElement: <ErrorPage />,
   },
 
   {
     path: "signIn",
     element: <SignInPage />,
+    errorElement: <ErrorPage />,
   },
 
-  { path: "createUser", element: <FormPage /> },
+  { path: "createUser", element: <FormPage />, errorElement: <ErrorPage /> },
 
   {
     path: "listOfUsers",
     element: <UsersPage />,
+    errorElement: <ErrorPage />,
   },
 
   {
     path: "editUser/",
     element: <EditFormPage />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: ":id",
