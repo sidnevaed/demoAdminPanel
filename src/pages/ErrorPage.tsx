@@ -35,7 +35,7 @@ export const ErrorPage = () => {
         case 500:
           return {
             title: defaultTitle,
-            message: "Проблема на сервере",
+            message: "Проблема на сервере.",
           };
         case 404:
           return {
